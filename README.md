@@ -8,46 +8,73 @@
 
 ## Getting Started
 
-- Clone from repo.
-- npm install or imp i to install dependencies.
+- Clone from repo. [Link to Repo](https://github.com/Willem-Jacobs/city-explorer)
+- `npm install` or `npm i` to install dependencies.
 
 ## Architecture
+
+- Trello for Project Management
+- React
+- React Bootstrap & Bootstrap
+- Axios
+- LocationIQ [Link](https://locationiq.com/)
+
 <!-- Provide a detailed description of the application design. What technologies (languages, libraries, etc) you're using, and any other relevant design information. -->
 
 ## Change Log
-<!-- Use this area to document the iterative changes made to your application as each feature is successfully implemented. Use time stamps. Here's an example:
 
+07.27.2021 10:30am - Basic structure setup and deployed.
+
+<!--
 01-01-2001 4:59pm - Application now has a fully-functional express server, with a GET route for the location resource. -->
 
 ## Credit and Collaborations
 <!-- Give credit (and a link) to other people or resources that helped you build this application. -->
 
-Name of feature:
+### Feature 1
 
-Estimate of time needed to complete:
+**Name of feature:** Basic structure setup and deployed
 
-Start time:
+**Estimate of time needed to complete:** 1 hour
 
-Finish time:
+**Start time:** 09:30am
 
-Actual time needed to complete:
+**Finish time:** 10:50am
 
-Name of feature:
+**Actual time needed to complete:** 1:20 hour
 
-Estimate of time needed to complete:
+### Feature 2
 
-Start time:
+**Name of feature:**
 
-Finish time:
+**Estimate of time needed to complete:**
 
-Actual time needed to complete:
+**Start time:**
 
-Name of feature:
+**Finish time:**
 
-Estimate of time needed to complete:
+**Actual time needed to complete:**
 
-Start time:
+### Feature 3
 
-Finish time:
+**Name of feature:**
 
-Actual time needed to complete:
+**Estimate of time needed to complete:**
+
+**Start time:**
+
+**Finish time:**
+
+**Actual time needed to complete:**
+
+### Feature 4
+
+**Name of feature:**
+
+**Estimate of time needed to complete:**
+
+**Start time:**
+
+**Finish time:**
+
+**Actual time needed to complete:**
