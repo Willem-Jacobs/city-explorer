@@ -3,6 +3,7 @@ import Container from "react-bootstrap/Container";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import axios from "axios";
+import CityCard from "./CityCard";
 
 class CityForm extends React.Component {
   constructor(props) {
@@ -74,9 +75,9 @@ class CityForm extends React.Component {
             Explore!
           </Button>
         </Form>
-        {this.state.renderCityInfo && (
-          <p className="mt-4">{this.state.returnedCity.displayName}</p>
-        )}
+        {this.state.renderCityInfo && 
+          <CityCard cityData={this.state.returnedCity}/>
+        }
         {this.state.renderError && (
           <p className="mt-4">{this.state.errorMessage}</p>
         )}
