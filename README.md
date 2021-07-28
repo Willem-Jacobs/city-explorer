@@ -10,6 +10,7 @@
 
 - Clone from repo. [Link to Repo](https://github.com/Willem-Jacobs/city-explorer)
 - `npm install` or `npm i` to install dependencies.
+- `.env` file needed with the API key in it. `REACT_APP_CITY_KEY=<YOUR KEY VALUE INSERTED>` for LocationIQ.
 
 ## Architecture
 
