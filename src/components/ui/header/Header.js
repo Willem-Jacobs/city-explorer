@@ -3,9 +3,15 @@ import React from "react";
 class Header extends React.Component {
   render() {
     return (
-      <>
-        <h1>Header info</h1>
-      </>
+      <header>
+        <h1>City Explorer</h1>
+        <nav>
+          {/* <ul>
+            <li>Item 1</li>
+            <li>Item 2</li>
+          </ul> */}
+        </nav>
+      </header>
     );
   }
 }
