@@ -26,6 +26,7 @@
 ## Change Log
 
 07.27.2021 10:30am (V1.0.0) - Basic structure setup and deployed.
+
 07.28.2021 1:30pm (v1.0.1) - Added form to allow entry of a city with a button to click that will submit the form. An API call is done to locationIQ to retrieve the data for that city. A card will display below the search button dislaying the city info (name/state/country/etc) along with the latitude and longitude of the city center. Error messages will show if some issue happens with the API call.
 
 ## Credit and Collaborations
