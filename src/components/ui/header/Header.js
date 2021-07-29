@@ -4,7 +4,7 @@ class Header extends React.Component {
   render() {
     return (
       <header>
-        <h1>City Explorer</h1>
+        <h1 className="center">City Explorer</h1>
         <nav>
           {/* <ul>
             <li>Item 1</li>

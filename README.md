@@ -29,6 +29,8 @@
 
 07.28.2021 1:30pm (v1.0.1) - Added form to allow entry of a city with a button to click that will submit the form. An API call is done to locationIQ to retrieve the data for that city. A card will display below the search button dislaying the city info (name/state/country/etc) along with the latitude and longitude of the city center. Error messages will show if some issue happens with the API call.
 
+07.28.2021 10:45pm (v1.0.2) - Added feature to show a map based on city searched. Added styles and cards. Added some colors & button icons. Added clearing screen fatures.
+
 ## Credit and Collaborations
 
 <!-- Give credit (and a link) to other people or resources that helped you build this application. -->
@@ -59,15 +61,15 @@
 
 ### Feature 3
 
-**Name of feature:**
+**Name of feature:** To show a map of the city searched
 
-**Estimate of time needed to complete:**
+**Estimate of time needed to complete:** 1 hour
 
-**Start time:**
+**Start time:** 09:00pm
 
-**Finish time:**
+**Finish time:** 10:45pm
 
-**Actual time needed to complete:**
+**Actual time needed to complete:** 1:45 hours.
 
 ### Feature 4
 
