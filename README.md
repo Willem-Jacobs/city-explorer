@@ -2,6 +2,7 @@
 
 **Author**: Willem Jacobs
 **Version**: 1.0.3 (increment the patch/fix version number if you make more commits past your first submission)
+**Deployed Site**: [Cick here to link to City Explorer](https://city-explorer-wamj.netlify.app/)
 
 ## Overview
 
@@ -20,6 +21,7 @@ A site that allows you to enter a city and get back the coordinates of the city 
 - React Bootstrap & Bootstrap
 - Axios
 - LocationIQ [Link](https://locationiq.com/)
+- UML picture - ![UML](CE-UMLv1-1.png "UML Image")
 
 ## Change Log
 
