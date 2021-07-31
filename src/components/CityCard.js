@@ -12,9 +12,22 @@ class CityCard extends React.Component {
             Latitude: <strong>{this.props.cityData.lat}</strong>
             Longitude: <strong>{this.props.cityData.lon}</strong>
           </Card.Text>
-          <Button className="mt-3" onClick={this.props.showMapHandler}>
-            <i className="bi-map">{"  "}Show Map</i>
-          </Button>
+          <div className="d-inline p-2">
+            <Button className="mt-3" onClick={this.props.showMapHandler}>
+              <i className="bi-map">
+                {"  "}
+                {this.props.showMap ? "Hide Map" : "Show Map"}
+              </i>
+            </Button>
+          </div>
+          <div className="d-inline p-2">
+            <Button className="mt-3" onClick={this.props.showWeatherHandler}>
+              <i className="bi-cloud-lightning-rain">
+                {"  "}
+                {this.props.showWeather ? "Hide Weather" : "Show Weather"}
+              </i>
+            </Button>
+          </div>
         </Card.Body>
       </Card>
     );
