@@ -1,7 +1,7 @@
 # City Explorer
 
 **Author**: Willem Jacobs
-**Version**: 1.0.3 (increment the patch/fix version number if you make more commits past your first submission)
+**Version**: 1.0.4 (increment the patch/fix version number if you make more commits past your first submission)
 **Deployed Site**: [Cick here to link to City Explorer](https://city-explorer-wamj.netlify.app/)
 
 ## Overview
@@ -21,7 +21,7 @@ A site that allows you to enter a city and get back the coordinates of the city 
 - React Bootstrap & Bootstrap
 - Axios
 - LocationIQ [Link](https://locationiq.com/)
-- UML picture - ![UML](CE-UMLv1-1.png "UML Image")
+- UML picture for Lab-06 - ![UML](CE-UMLv1-1.png "UML Image")
 
 ## Change Log
 
@@ -32,6 +32,8 @@ A site that allows you to enter a city and get back the coordinates of the city 
 07.28.2021 10:45pm (v1.0.2) - Added feature to show a map based on city searched. Added styles and cards. Added some colors & button icons. Added clearing screen fatures.
 
 7.28.2021 11:00pm (v1.0.3) - Error handling was completed for API requests.
+
+7.31.2021 8:30pm (v1.0.4) - Added feature to pull weather for the selected city from a node backend.
 
 ## Credit and Collaborations
 
@@ -84,3 +86,15 @@ No collaborations from others on this project.
 **Finish time:** 1:30pm
 
 **Actual time needed to complete:** 30 mins. This was done as I was working on the data retrieval part of the assignment from the API.
+
+### Feature Lab-07 Trellow cards 2 & 3
+
+**Name of feature:** Back-End Weather fetching
+
+**Estimate of time needed to complete:** 3 hours
+
+**Start time:** 2:00pm
+
+**Finish time:** 8:30pm
+
+**Actual time needed to complete:** 6:30 hours. I did take about 2 hours break time totdal reduciing the code time to 4:30 hours. Still need to get some more items done but submitting for now and will work on the rest in the AM before lab is graded.
