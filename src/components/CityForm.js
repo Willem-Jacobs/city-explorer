@@ -5,6 +5,7 @@ import Button from "react-bootstrap/Button";
 import axios from "axios";
 import CityCard from "./CityCard";
 import CityMap from "./CityMap";
+import WeatherCard from "./WeatherCard";
 
 class CityForm extends React.Component {
   constructor(props) {
@@ -16,10 +17,12 @@ class CityForm extends React.Component {
         lon: "",
         displayName: "",
       },
+      cityWeather: [],
       renderCityInfo: false,
       renderError: false,
       errorMessage: "",
       showMap: false,
+      showWeather: false,
     };
   }
 
@@ -39,6 +42,8 @@ class CityForm extends React.Component {
       renderCityInfo: false,
       showMap: false,
       renderError: false,
+      showWeather: false,
+      errorMessage: "",
     });
     try {
       let cityResults = await axios.get(
@@ -52,13 +57,29 @@ class CityForm extends React.Component {
           displayName: cityResults.data[0].display_name,
         },
         renderError: false,
-        enteredCity: "",
       });
     } catch (error) {
       this.setState({
         renderError: true,
-        errorMessage: `Error Occured: ${error.response.status}, ${error.response.data.error}`,
+        errorMessage: `Error Occured: ${error.response.status} - ${error.response.data.error}`,
       });
+    }
+    if (!this.state.errorMessage) {
+      try {
+        let tempWeather = await axios.get(
+          `http://localhost:3001/weather?city=${this.state.enteredCity}`
+        );
+        this.setState({
+          showWeather: true,
+          cityWeather: tempWeather.data,
+          enteredCity: "",
+        });
+      } catch (error) {
+        this.setState({
+          renderError: true,
+          errorMessage: `Error Occured: ${error.response.status} -- ${error.response.data}`,
+        });
+      }
     }
   };
 
@@ -67,11 +88,17 @@ class CityForm extends React.Component {
       renderCityInfo: false,
       renderError: false,
       showMap: false,
+      showWeather: false,
+      errorMessage: "",
     });
   };
 
   showMapHandler = () => {
-    this.setState({ showMap: true });
+    this.setState({ showMap: !this.state.showMap });
+  };
+
+  showWeatherHandler = () => {
+    this.setState({ showWeather: !this.state.showWeather });
   };
 
   render() {
@@ -85,7 +112,6 @@ class CityForm extends React.Component {
             <Form.Label>City Name</Form.Label>
             <Form.Control
               className="rounded border-primary"
-              autocomplete="off"
               type="text"
               value={this.state.enteredCity}
               placeholder="Enter city name to search"
@@ -100,11 +126,17 @@ class CityForm extends React.Component {
         {this.state.renderCityInfo && (
           <CityCard
             showMapHandler={this.showMapHandler}
+            showWeatherHandler={this.showWeatherHandler}
+            showMap={this.state.showMap}
+            showWeather={this.state.showWeather}
             cityData={this.state.returnedCity}
           />
         )}
         {this.state.renderError && (
           <p className="mt-4">{this.state.errorMessage}</p>
+        )}
+        {this.state.showWeather && (
+          <WeatherCard weather={this.state.cityWeather} />
         )}
         {this.state.showMap && (
           <CityMap returnedCity={this.state.returnedCity} />
