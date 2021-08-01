@@ -43,6 +43,7 @@ class CityForm extends React.Component {
       showMap: false,
       renderError: false,
       showWeather: false,
+      errorMessage: "",
     });
     try {
       let cityResults = await axios.get(
@@ -60,26 +61,25 @@ class CityForm extends React.Component {
     } catch (error) {
       this.setState({
         renderError: true,
-        errorMessage: `Error Occured: ${error.response.status}, ${error.response.data.error}`,
+        errorMessage: `Error Occured: ${error.response.status} - ${error.response.data.error}`,
       });
-      console.log("Error State: ", this.state.errorMessage);
     }
-
-    try {
-      let tempWeather = await axios.get(
-        `http://localhost:3001/weather?city=${this.state.enteredCity}`
-      );
-      this.setState({
-        showWeather: true,
-        cityWeather: tempWeather.data,
-        enteredCity: "",
-      });
-      console.log(this.state.cityWeather);
-    } catch (error) {
-      this.setState({
-        renderError: true,
-        errorMessage: `Error Occured: ${error.response.status}, ${error.response.data.error}`,
-      });
+    if (!this.state.errorMessage) {
+      try {
+        let tempWeather = await axios.get(
+          `http://localhost:3001/weather?city=${this.state.enteredCity}`
+        );
+        this.setState({
+          showWeather: true,
+          cityWeather: tempWeather.data,
+          enteredCity: "",
+        });
+      } catch (error) {
+        this.setState({
+          renderError: true,
+          errorMessage: `Error Occured: ${error.response.status} -- ${error.response.data}`,
+        });
+      }
     }
   };
 
@@ -89,6 +89,7 @@ class CityForm extends React.Component {
       renderError: false,
       showMap: false,
       showWeather: false,
+      errorMessage: "",
     });
   };
 
