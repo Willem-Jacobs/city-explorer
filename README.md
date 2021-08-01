@@ -21,7 +21,8 @@ A site that allows you to enter a city and get back the coordinates of the city 
 - React Bootstrap & Bootstrap
 - Axios
 - LocationIQ [Link](https://locationiq.com/)
-- UML picture - ![UML](CE-UMLv1-1.png "UML Image")
+- UML Lab-06 - ![UML](CE-UMLv1-1.png "UML Image")
+- UML Lab-07 - ![Version 2](CE-Lab07-1.png "Image")
 
 ## Change Log
 
