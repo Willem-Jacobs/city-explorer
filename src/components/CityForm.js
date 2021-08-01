@@ -1,11 +1,13 @@
 import React from "react";
 import Container from "react-bootstrap/Container";
+import Toast from "react-bootstrap/Toast";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import axios from "axios";
 import CityCard from "./CityCard";
 import CityMap from "./CityMap";
 import WeatherCard from "./WeatherCard";
+import { ToastContainer } from "react-bootstrap";
 
 class CityForm extends React.Component {
   constructor(props) {
@@ -77,7 +79,7 @@ class CityForm extends React.Component {
       } catch (error) {
         this.setState({
           renderError: true,
-          errorMessage: `Error Occured: ${error.response.status} -- ${error.response.data}`,
+          errorMessage: `Error Occured: ${error.response.status} - ${error.response.data}`,
         });
       }
     }
@@ -90,6 +92,7 @@ class CityForm extends React.Component {
       showMap: false,
       showWeather: false,
       errorMessage: "",
+      enteredCity: "",
     });
   };
 
@@ -101,9 +104,28 @@ class CityForm extends React.Component {
     this.setState({ showWeather: !this.state.showWeather });
   };
 
+  closeToastHandler = () => {
+    this.setState({
+      renderError: false,
+      errorMessage: "",
+    });
+  };
+
   render() {
     return (
       <Container>
+        <ToastContainer position="middle-center">
+          <Toast
+            className="d-inline-block m-1 bg-danger"
+            show={this.state.renderError}
+            onClose={this.closeToastHandler}
+          >
+            <Toast.Header>
+              <strong className="me-auto">Error</strong>
+            </Toast.Header>
+            <Toast.Body>{this.state.errorMessage}</Toast.Body>
+          </Toast>
+        </ToastContainer>
         <Form onSubmit={this.cityFormSubmitHandler}>
           <Form.Group
             className="mb-4 p-3 mt-5 border rounded border-warning"
@@ -131,9 +153,6 @@ class CityForm extends React.Component {
             showWeather={this.state.showWeather}
             cityData={this.state.returnedCity}
           />
-        )}
-        {this.state.renderError && (
-          <p className="mt-4">{this.state.errorMessage}</p>
         )}
         {this.state.showWeather && (
           <WeatherCard weather={this.state.cityWeather} />
