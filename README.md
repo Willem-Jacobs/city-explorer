@@ -98,4 +98,4 @@ No collaborations from others on this project.
 
 **Finish time:** 8:30pm
 
-**Actual time needed to complete:** 6:30 hours. I did take about 2 hours break time totdal reduciing the code time to 4:30 hours. Still need to get some more items done but submitting for now and will work on the rest in the AM before lab is graded.
+**Actual time needed to complete:** 6:30 hours. I did take about 2 hours break time total reducing the code time to 4:30 hours. Still need to get some more items done but submitting for now and will work on the rest in the AM before lab is graded.
