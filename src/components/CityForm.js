@@ -69,7 +69,7 @@ class CityForm extends React.Component {
     if (!this.state.errorMessage) {
       try {
         let tempWeather = await axios.get(
-          `http://localhost:3001/weather?city=${this.state.enteredCity}`
+          `http://localhost:3001/weather?lat=${this.state.returnedCity.lat}&lon=${this.state.returnedCity.lon}`
         );
         this.setState({
           showWeather: true,
