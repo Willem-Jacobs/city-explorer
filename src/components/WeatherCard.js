@@ -10,6 +10,12 @@ class WeatherCard extends React.Component {
           <Card.Body>
             <Card.Text>
               Forecast: <strong>{item.description}</strong>
+              <span>
+                <img
+                  src={`/images/weather/icons/${item.icon}.png`}
+                  alt="weather icon"
+                />
+              </span>
             </Card.Text>
           </Card.Body>
         </Card>
