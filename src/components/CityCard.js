@@ -28,6 +28,14 @@ class CityCard extends React.Component {
               </i>
             </Button>
           </div>
+          <div className="d-inline p-2">
+            <Button className="mt-3" onClick={this.props.showMoviesHandler}>
+              <i className="bi-cloud-lightning-rain">
+                {"  "}
+                {this.props.showMovies ? "Hide Movies" : "Show Movies"}
+              </i>
+            </Button>
+          </div>
         </Card.Body>
       </Card>
     );
