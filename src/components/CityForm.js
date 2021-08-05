@@ -7,6 +7,7 @@ import axios from "axios";
 import CityCard from "./CityCard";
 import CityMap from "./CityMap";
 import WeatherCard from "./WeatherCard";
+import MoviesCard from "./MoviesCard";
 import { ToastContainer } from "react-bootstrap";
 
 class CityForm extends React.Component {
@@ -27,6 +28,7 @@ class CityForm extends React.Component {
       errorMessage: "",
       showMap: false,
       showWeather: false,
+      showMovies: false,
     };
   }
 
@@ -81,6 +83,7 @@ class CityForm extends React.Component {
       showMap: false,
       renderError: false,
       showWeather: false,
+      showMovies: false,
       errorMessage: "",
     });
     try {
@@ -115,6 +118,7 @@ class CityForm extends React.Component {
       renderError: false,
       showMap: false,
       showWeather: false,
+      showMovies: false,
       errorMessage: "",
       enteredCity: "",
     });
@@ -126,6 +130,10 @@ class CityForm extends React.Component {
 
   showWeatherHandler = () => {
     this.setState({ showWeather: !this.state.showWeather });
+  };
+
+  showMoviesHandler = () => {
+    this.setState({ showMovies: !this.state.showMovies });
   };
 
   closeToastHandler = () => {
@@ -174,8 +182,10 @@ class CityForm extends React.Component {
             <CityCard
               showMapHandler={this.showMapHandler}
               showWeatherHandler={this.showWeatherHandler}
+              showMoviesHandler={this.showMoviesHandler}
               showMap={this.state.showMap}
               showWeather={this.state.showWeather}
+              showMovies={this.state.showMovies}
               cityData={this.state.returnedCity}
             />
           )}
@@ -185,6 +195,7 @@ class CityForm extends React.Component {
           {this.state.showMap && (
             <CityMap returnedCity={this.state.returnedCity} />
           )}
+          {this.state.showMovies && <MoviesCard movies={this.state.movies} />}
         </Container>
       </>
     );
