@@ -1,18 +1,20 @@
 # City Explorer
 
 **Author**: Willem Jacobs
-**Version**: 1.0.4 (increment the patch/fix version number if you make more commits past your first submission)
+**Version**: 1.0.5 (increment the patch/fix version number if you make more commits past your first submission)
 **Deployed Site**: [Cick here to link to City Explorer](https://city-explorer-wamj.netlify.app/)
+**Backend Server** [Click here to link to backend server](https://city-explorer-api-wamj.herokuapp.com)
 
 ## Overview
 
-A site that allows you to enter a city and get back the coordinates of the city along with a full name. A show map button is available to display a map of that city. Uses the LocationIQ API to get the data required.
+A site that allows you to enter a city and get back the coordinates of the city along with a full name. A show map button is available to display a map of that city. Uses the LocationIQ API to get the data required. Gets the 5 day forecast for the city searched. Also gets movies from API that shows moves with the city name in the title. Uses a deployed node.js server created on Heroku.com.
 
 ## Getting Started
 
 - Clone from repo. [Link to Repo](https://github.com/Willem-Jacobs/city-explorer)
 - `npm install` or `npm i` to install dependencies.
 - `.env` file needed with the API key in it. `REACT_APP_CITY_KEY=<YOUR KEY VALUE INSERTED>` for LocationIQ.
+- `REACT_APP_BACKEND_SERVER` in `.env` file for the backend server address to work.
 
 ## Architecture
 
@@ -21,8 +23,11 @@ A site that allows you to enter a city and get back the coordinates of the city 
 - React Bootstrap & Bootstrap
 - Axios
 - LocationIQ [Link](https://locationiq.com/)
-- UML Lab-06 - ![UML](CE-UMLv1-1.png "UML Image")
-- UML Lab-07 - ![Version 2](CE-Lab07-1.png "Image")
+- Netlify - frontend client
+- Heroky - backend server
+- UML Lab-06 - ![UML](CE-Lab06-UML.png "UML Image")
+- UML Lab-07 - ![UML](CE-Lab07-UML.png "UML Image")
+- UML Lab-08 - ![UML](CE-Lab08-UML.png "UML Image")
 
 ## Change Log
 
@@ -35,6 +40,8 @@ A site that allows you to enter a city and get back the coordinates of the city 
 7.28.2021 11:00pm (v1.0.3) - Error handling was completed for API requests.
 
 7.31.2021 8:30pm (v1.0.4) - Added feature to pull weather for the selected city from a node backend.
+
+08.04.2021 10:15pm (v1.0.5) - Lab 8 completion - Added weather searching from API and movie searching from API. Using private backend server instead of direct calls from client app. Request goes from client to backend then from backend to API servers and returns.
 
 ## Credit and Collaborations
 
@@ -99,3 +106,13 @@ No collaborations from others on this project.
 **Finish time:** 8:30pm
 
 **Actual time needed to complete:** 6:30 hours. I did take about 2 hours break time total reducing the code time to 4:30 hours. Still need to get some more items done but submitting for now and will work on the rest in the AM before lab is graded.
+
+**Name of feature:** Back-End Weather from API and Movies from API
+
+**Estimate of time needed to complete:** 1 hours
+
+**Start time:** 9:00pm
+
+**Finish time:** 10:00pm
+
+**Actual time needed to complete:** 1 hour. Had more issues deploying and testing to ensure all worked correctly.
