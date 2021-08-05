@@ -30,7 +30,7 @@ class CityCard extends React.Component {
           </div>
           <div className="d-inline p-2">
             <Button className="mt-3" onClick={this.props.showMoviesHandler}>
-              <i className="bi-cloud-lightning-rain">
+              <i className="bi-film">
                 {"  "}
                 {this.props.showMovies ? "Hide Movies" : "Show Movies"}
               </i>
