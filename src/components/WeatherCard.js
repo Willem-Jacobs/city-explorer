@@ -1,23 +1,13 @@
 import React from "react";
 import Card from "react-bootstrap/Card";
+import Weather from "./Weather";
 
 class WeatherCard extends React.Component {
   render() {
     const weatherRender = this.props.weather.map((item, index) => {
       return (
         <Card className="mt-4 text-center" key={index}>
-          <Card.Header>{item.date}</Card.Header>
-          <Card.Body>
-            <Card.Text>
-              Forecast: <strong>{item.description}</strong>
-              <span>
-                <img
-                  src={`/images/weather/icons/${item.icon}.png`}
-                  alt="weather icon"
-                />
-              </span>
-            </Card.Text>
-          </Card.Body>
+          <Weather item={item} />
         </Card>
       );
     });
