@@ -1,7 +1,7 @@
 # City Explorer
 
 **Author**: Willem Jacobs
-**Version**: 1.0.5 (increment the patch/fix version number if you make more commits past your first submission)
+**Version**: 1.0.6 (increment the patch/fix version number if you make more commits past your first submission)
 **Deployed Site**: [Cick here to link to City Explorer](https://city-explorer-wamj.netlify.app/)
 **Backend Server** [Click here to link to backend server](https://city-explorer-api-wamj.herokuapp.com)
 
@@ -15,6 +15,7 @@ A site that allows you to enter a city and get back the coordinates of the city 
 - `npm install` or `npm i` to install dependencies.
 - `.env` file needed with the API key in it. `REACT_APP_CITY_KEY=<YOUR KEY VALUE INSERTED>` for LocationIQ.
 - `REACT_APP_BACKEND_SERVER` in `.env` file for the backend server address to work.
+- See the `sample.env` file for more information.
 
 ## Architecture
 
@@ -43,7 +44,7 @@ A site that allows you to enter a city and get back the coordinates of the city 
 
 08.04.2021 10:15pm (v1.0.5) - Lab 8 completion - Added weather searching from API and movie searching from API. Using private backend server instead of direct calls from client app. Request goes from client to backend then from backend to API servers and returns.
 
-08.07.2021 02:54pm (v1.0.5) - Lab 9. No changes as my code base already broken down to the smallest based on the Trello lab-09 card 2. No version change.
+08.07.2021 02:54pm (v1.0.6) - Lab 9. Seperated the weather into a parent and child where the child shows the details. Seperated the movies into a parent and child component where the child will show the details. 2 modules created (Weather.js & Movie.js). Refactored code to use these 2 modules.
 
 ## Credit and Collaborations
 
@@ -121,10 +122,10 @@ No collaborations from others on this project.
 
 **Name of feature:** Trello Lab-09 card 2
 
-**Estimate of time needed to complete:** 0 hours
+**Estimate of time needed to complete:** 1 hours
 
-**Start time:** N/A
+**Start time:** 04:00pm
 
-**Finish time:** N/A
+**Finish time:** 04:30pm
 
-**Actual time needed to complete:** I already have my code broken down this way to render each item as a card.
+**Actual time needed to complete:** Way my code was structed, this was just a copy and past along with cutting out some code. I did use props desctructuring to make it easier.
