@@ -43,6 +43,8 @@ A site that allows you to enter a city and get back the coordinates of the city 
 
 08.04.2021 10:15pm (v1.0.5) - Lab 8 completion - Added weather searching from API and movie searching from API. Using private backend server instead of direct calls from client app. Request goes from client to backend then from backend to API servers and returns.
 
+08.07.2021 02:54pm (v1.0.5) - Lab 9. No changes as my code base already broken down to the smallest based on the Trello lab-09 card 2. No version change.
+
 ## Credit and Collaborations
 
 No collaborations from others on this project.
@@ -116,3 +118,13 @@ No collaborations from others on this project.
 **Finish time:** 10:00pm
 
 **Actual time needed to complete:** 1 hour. Had more issues deploying and testing to ensure all worked correctly.
+
+**Name of feature:** Trello Lab-09 card 2
+
+**Estimate of time needed to complete:** 0 hours
+
+**Start time:** N/A
+
+**Finish time:** N/A
+
+**Actual time needed to complete:** I already have my code broken down this way to render each item as a card.
